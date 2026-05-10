@@ -10,6 +10,15 @@ def test_pow_base_positiva():
     """Ejemplo: 2 ** 3 debe dar 8."""
     assert pow_(2, 3) == 8
 
+@pytest.mark.parametrize("a,b,expected", [
+    (5, 0, 1),
+    (5, 1, 5),
+    (-3, 2, 9),
+    (9, 0.5, 3)
+])
+def test_pow_parametrizado(a, b, expected):
+    assert pow_(a, b) == expected
+
 
 # --- TU TURNO ---
 # Agregá tests para los siguientes casos:
