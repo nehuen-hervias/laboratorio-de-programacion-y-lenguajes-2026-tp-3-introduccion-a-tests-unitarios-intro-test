@@ -10,6 +10,15 @@ def test_sub_resta_positivos():
     """Ejemplo: 5 - 2 debe dar 3."""
     assert sub(5, 2) == 3
 
+@pytest.mark.parametrize("a,b,expected", [
+    (10, 15, -5),
+    (12, 0, 12),
+    (-5, -10, -15),
+    (1.5, 0.5, 1.0)
+])
+def test_sub_parametrizado(a, b, expected):
+    assert sub(a, b) == expected
+
 
 # --- TU TURNO ---
 # Agregá tests para los siguientes casos:
