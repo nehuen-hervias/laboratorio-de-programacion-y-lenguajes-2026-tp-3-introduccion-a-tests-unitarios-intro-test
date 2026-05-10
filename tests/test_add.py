@@ -28,3 +28,11 @@ def test_add_suma_positivos():
 # ])
 # def test_add_parametrizado(a, b, expected):
 #     assert add(a, b) == expected
+@pytest.mark.parametrize("a,b,expected", [
+    (-1, -2, -3),
+    (1, -2, -1),
+    (2, 0, 2),
+    (1.5, 2.5, 4.0)
+])
+def test_add_parametrizado(a, b, expected):
+    assert add(a, b) == expected
