@@ -10,6 +10,16 @@ def test_mul_positivos():
     """Ejemplo: 3 * 4 debe dar 12."""
     assert mul(3, 4) == 12
 
+@pytest.mark.parametrize("a,b,expected", [
+    (0, 5, 0),
+    (-3, -4, 12),
+    (3, -4, -12),
+    (3, 1, 3),
+    (1.5, 2.5, 3.75)
+])
+def test_mul_parametrizado(a, b, expected):
+    assert mul(a, b) == expected
+
 
 # --- TU TURNO ---
 # Agregá tests para los siguientes casos:
